@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    font-size: 14px;
+    background: black;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.container {
+    position: relative;
+    background-color: #077b32;
+    text-shadow: 0 0 10px #077b32;
+   
+
+    width: 220px;
+    height: 220px;
+    padding: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 60px 5px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    transition: width 0.4s, height 0.4s,
+        border-radius 0.4s;
+}
+
+.container:hover {
+    width: 340px;
+    height: 440px;
+    border-radius: 4px;
+    box-shadow: 0 0 50px #077b32;
+}
+
+.img-container {
+    width: 170px;
+   
+    height: 170px;
+    min-height: 170px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 40px 5px rgba(0, 0, 0, 0.2);
+}
+
+.img-container img {
+    width: 100%;
+    max-width: 100%;
+}
+
+.full-name {
+    font-size: 1.4em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-top: 40px;
+    margin-bottom: 16px;
+}
+
+.role,
+.description {
+    font-size: 1em;
+    letter-spacing: 0.5px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.role {
+    text-transform: uppercase;
+    padding-bottom: 8px;
+    margin-bottom: 24px;
+    border-bottom: 2px solid #ffbe44;
+}
+
+.social-container {
+    position: absolute;
+    top: 40px;
+    left: -40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.social-container button {
+    border: none;
+    outline: none;
+    color: #eee;
+    background: none;
+    width: 20px;
+    height: 40px;
+    font-size: 1.7em;
+    margin-bottom: 16px;
+    cursor: pointer;
+    transition: transform 0.4s;
+}
+
+.container:hover .social-container button {
+    transform: translateX(60px);
+    transition-delay: 0.3s;
+}
+
+.container:hover .social-container button:nth-child(2) {
+    transition-delay: 0.5s;
+}
+
+.container:hover .social-container button:nth-child(3) {
+    transition-delay: 0.7s;
+}
+footer{
+    
+    background-color: black;
+    
+    color: #077b32;
+    padding: 10px;
+    text-align: right;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+}
+    nav{
+        width: 100%;
+        height: 10vh;
+        position: sticky;
+    }
+    .nav-container{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .logo{
+        color: white;
+        font-size: 2rem;
+        font-weight: bold;
+    }
+    .logo span{
+        color: #077b32;
+        text-shadow: 0 0 10px #077b32;
+    }
+    .hamburg,
+    .cancel{
+        cursor: pointer;
+        position: absolute;
+        right: 15px;
+        top: 10px;
+        color: white;
+        display: none;
+        font-size: clamp(2.5rem, 0.5rem + 5vw, 3rem);
+    }
+    .nav-container .links{
+        display: flex;
+    }
+    .nav-container .links a{
+        position: relative;
+        font-size: 1.2rem;
+        color: white;
+        margin: 0 20px;
+        text-decoration: none;
+        font-weight: 550;
+        transition: 0.3s linear;
+    }
+    .nav-container .links a::before{
+        position: absolute;
+        content: "";
+        bottom: -3px;
+        left: 0;
+        width: 0%;
+        height: 3px;
+        background-color: #077b32;
+        transition: 0.2s linear;
+    }
+    .nav-container .links a:hover::before{
+        width: 100%;
+    }
+    .nav-container .links a:hover{
+        color: #077b32;
+    }
+    .dropdown{
+        z-index: 100;
+        position: absolute;
+        top: 0;
+        transform: translateY(-500px);
+        width: 100%;
+        height: auto;
+        backdrop-filter: blur(4px) brightness(40%);
+        box-shadow: 0 0 50px #077b32;
+}
+        
+    
+    .dropdown .links a{
+        display: flex;
+        color: white;
+        text-decoration: none;
+        justify-content: center;
+        padding: 15px 0;
+        align-items: center;
+        transition: 0.2s linear;
+    }
+    .dropdown .links a:hover{
+        background-color: #077b32;
+    }
